@@ -1,1 +1,1 @@
-# Google Meet Clone 👨🏻‍💻
+# SyncUp 👨🏻‍💻
