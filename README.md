@@ -1,1 +1,1 @@
-# SyncUp 👨🏻‍💻
+# Connectify 👨🏻‍💻
