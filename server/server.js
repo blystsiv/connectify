@@ -1,10 +1,8 @@
+import cors from 'cors';
+import dotenv from 'dotenv';
 import express from 'express';
 import http from 'http';
-import cors from 'cors';
-import twilio from 'twilio';
-import { v4 as uuidv4 } from 'uuid';
 import { Server } from 'socket.io';
-import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -15,6 +13,7 @@ const server = http.createServer(app);
 
 app.use(cors());
 
+// eslint-disable-next-line no-unused-vars
 const io = new Server(server, {
   cors: {
     origin: '*',
