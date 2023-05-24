@@ -8,7 +8,14 @@ This project aims to create a video conferencing application similar to Google M
 - Phone: [+380980098907](phone:+380980098907)
 - Telegram: [@ostap_blystsiv](https://telegram.me/ostap_blystsiv)
 
-## 📒 Lab 4
+
+# 📒 Lab 4
 - Zhuk Oleksandr
 - [My project](https://github.com/SashaBeetle/Zhuk.University.Tachka)
 - [Pull request link](https://github.com/SashaBeetle/connectify/pull/1#pullrequestreview-1442273439)
+
+<hr/>
+
+- Zakala Oleksandr
+- https://github.com/Rovikido/SafeRoute
+- https://github.com/Rovikido/connectify/pull/1/files/0873e22c86e1262c0d8e65a492a41f0e8b1fac11
