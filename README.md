@@ -7,3 +7,8 @@ This project aims to create a video conferencing application similar to Google M
 - Email: [ostap.blystsiv@gmail.com](mailto:ostap.blystsiv@gmail.com)
 - Phone: [+380980098907](phone:+380980098907)
 - Telegram: [@ostap_blystsiv](https://telegram.me/ostap_blystsiv)
+
+## 📒 Lab 4
+- Zhuk Oleksandr
+- [My project](https://github.com/SashaBeetle/Zhuk.University.Tachka)
+- [Pull request link](https://github.com/SashaBeetle/connectify/pull/1#pullrequestreview-1442273439)
