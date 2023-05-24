@@ -10,6 +10,6 @@ This project aims to create a video conferencing application similar to Google M
 
 
 # Lab 4
-Zakala Oleksandr
-https://github.com/Rovikido/SafeRoute
-[https://github.com/Rovikido/Zhuk.University.Tachka/pull/1](https://github.com/Rovikido/connectify/pull/1)
+* Zakala Oleksandr
+* https://github.com/Rovikido/SafeRoute
+* https://github.com/Rovikido/connectify/pull/1/files/0873e22c86e1262c0d8e65a492a41f0e8b1fac11
