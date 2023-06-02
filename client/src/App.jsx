@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { IntroductionPage } from './pages/Introduction/Introduction';
+import IntroductionPage from './pages/IntroductionPage/IntroductionPage';
 import JoinRoomPage from './pages/JoinRoomPage/JoinRoomPage';
-import { NotFound } from './pages/NotFound';
 import RoomPage from './pages/RoomPage/RoomPage';
+import { NotFound } from './pages/NotFound';
 import { connectWithSocketIOServer } from './utils/wss';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<IntroductionPage />} exact />
-      <Route path="/join" element={<JoinRoomPage />} />
+      <Route path="/join-room" element={<JoinRoomPage />} />
       <Route path="/room" element={<RoomPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
