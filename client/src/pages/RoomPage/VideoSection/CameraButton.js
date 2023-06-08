@@ -2,11 +2,14 @@ import React, { useState } from "react";
 
 import CameraButtonImg from "../../../assets/icons/camera.svg";
 import CameraButtonImgOff from "../../../assets/icons/camera-off.svg";
+import * as webRTCHandler from "../../../utils/webRTCHandler";
 
 const CameraButton = () => {
   const [isLocalVideoDisabled, setIsLocalVideoDisabled] = useState(false);
 
   const handleCameraButtonPressed = () => {
+    webRTCHandler.toggleCamera(isLocalVideoDisabled);
+
     setIsLocalVideoDisabled(!isLocalVideoDisabled);
   };
 
@@ -15,7 +18,6 @@ const CameraButton = () => {
       <img
         src={isLocalVideoDisabled ? CameraButtonImgOff : CameraButtonImg}
         className="video_button_image"
-        alt="asfd"
         onClick={handleCameraButtonPressed}
       />
     </div>

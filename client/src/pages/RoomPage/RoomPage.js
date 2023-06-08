@@ -9,13 +9,25 @@ import Overlay from "./Overlay";
 
 import "./RoomPage.css";
 
-const RoomPage = ({ roomId, identity, isRoomHost, showOverlay }) => {
+const RoomPage = ({
+  roomId,
+  identity,
+  isRoomHost,
+  showOverlay,
+  connectOnlyWithAudio,
+}) => {
   useEffect(() => {
-    webRTCHandler.getLocalPreviewAndInitRoomConnection(
-      isRoomHost,
-      identity,
-      roomId
-    );
+    if (!isRoomHost && !roomId) {
+      const siteUrl = window.location.origin;
+      window.location.href = siteUrl;
+    } else {
+      webRTCHandler.getLocalPreviewAndInitRoomConnection(
+        isRoomHost,
+        identity,
+        roomId,
+        connectOnlyWithAudio
+      );
+    }
   }, []);
 
   return (
@@ -24,8 +36,7 @@ const RoomPage = ({ roomId, identity, isRoomHost, showOverlay }) => {
       <VideoSection />
       <ChatSection />
       <RoomLabel roomId={roomId} />
-      {/* remove overlay */}
-      {!showOverlay && <Overlay />}
+      {showOverlay && <Overlay />}
     </div>
   );
 };
