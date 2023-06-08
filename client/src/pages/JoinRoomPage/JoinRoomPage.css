@@ -17,7 +17,6 @@
 .join_room_page_panel {
   display: flex;
   flex-direction: column;
-
 }
 
 .join_room_inputs_container {
@@ -28,6 +27,36 @@
   width: 100%;
   align-items: center;
   margin-top: 10px;
+}
+.join_room_button {
+  margin-right: 15px;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #cfff80;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  box-shadow: 10px 11px 49px -24px rgba(0, 0, 0, 0.75);
+}
+
+.create_room_button {
+  border: 1px solid #000;
+  background-color: #cfff80;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  box-shadow: 10px 11px 49px -24px rgba(0, 0, 0, 0.75);
+}
+
+.create_room_button:hover {
+  background-color: #000;
+  color: #cfff80;
+  box-shadow: none;
 }
 
 .join_room_buttons_container {
@@ -136,7 +165,6 @@
 
 .checkbox_container {
   display: flex;
-  /* margin-left: 35px; */
   margin-top: 5px;
   align-items: center;
 }
