@@ -31,7 +31,7 @@ WebRTC, JavaScript, SocketIO, Express.js, Node.js, React, Simple-peer
 ## Contacts
 
 - Email: [ostap.blystsiv@gmail.com](mailto:ostap.blystsiv@gmail.com)
-- Phone: [+380980098907](phone:+380980098907)
+- Phone: [+380980098907](tel:+380980098907)
 - Telegram: [@ostap_blystsiv](https://telegram.me/ostap_blystsiv)
 
 ## 📒 Lab 4
