@@ -1,7 +1,7 @@
 import React from "react";
-import ParticipantsLabel from "./ParticipantsLabel";
-import Participants from "./Participants";
 import DirectChat from './DirectChat/DirectChat';
+import Participants from "./Participants";
+import ParticipantsLabel from "./ParticipantsLabel";
 
 const ParticipantsSection = () => {
   return (

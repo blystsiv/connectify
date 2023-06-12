@@ -3,8 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import IntroductionPage from './pages/IntroductionPage/IntroductionPage';
 import JoinRoomPage from './pages/JoinRoomPage/JoinRoomPage';
-import RoomPage from './pages/RoomPage/RoomPage';
 import { NotFound } from './pages/NotFound';
+import RoomPage from './pages/RoomPage/RoomPage';
 import { connectWithSocketIOServer } from './utils/wss';
 
 function App() {
@@ -14,10 +14,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<IntroductionPage />} exact />
-      <Route path="/join-room" element={<JoinRoomPage />} />
-      <Route path="/room" element={<RoomPage />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path='/' element={<IntroductionPage />} exact />
+      <Route path='/join-room' element={<JoinRoomPage />} />
+      <Route path='/room' element={<RoomPage />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import MicButtonImg from "../../../assets/icons/microphone.svg";
 import MicButtonImgOff from "../../../assets/icons/microphone-off.svg";
+import MicButtonImg from "../../../assets/icons/microphone.svg";
 import * as webRTCHandler from "../../../utils/webRTCHandler";
 
 const MicButton = () => {
@@ -15,6 +15,7 @@ const MicButton = () => {
   return (
     <div className="video_button_container">
       <img
+        alt="mute button"
         src={isMicMuted ? MicButtonImgOff : MicButtonImg}
         onClick={handleMicButtonPressed}
         className="video_button_image"
@@ -24,3 +25,4 @@ const MicButton = () => {
 };
 
 export default MicButton;
+

@@ -36,6 +36,7 @@ const NewMessage = () => {
         onKeyDown={handleKeyPressed}
       />
       <img
+        alt="send button"
         className="new_message_button"
         src={SendMessageButton}
         onClick={sendMessage}

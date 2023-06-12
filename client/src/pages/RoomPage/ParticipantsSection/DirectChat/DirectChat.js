@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import ConversationNotChosen from "./ConversationNotChosen";
+import DirectChatHeader from "./DirectChatHeader";
 import MessagesContainer from "./MessagesContainer";
 import NewMessage from "./NewMessage";
-import ConversationNotChosen from "./ConversationNotChosen";
-import { connect } from "react-redux";
-import DirectChatHeader from "./DirectChatHeader";
 
 const getDirectChatHistory = (directChatHistory, socketId = null) => {
   console.log(directChatHistory);

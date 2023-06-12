@@ -38,6 +38,7 @@ const NewMessage = ({ activeConversation, identity }) => {
         onKeyDown={handleKeyPressed}
       />
       <img
+        alt="send button"
         className="new_message_button"
         src={sendMessageButton}
         onClick={sendMessage}

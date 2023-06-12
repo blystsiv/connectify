@@ -7,7 +7,7 @@ export const fetchTURNCredentials = async () => {
 
   if (responseData.token && responseData.token.iceServers) {
     TURNIceServers = responseData.token.iceServers;
-  }  
+  }
 
   return TURNIceServers;
 };

@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { connect } from "react-redux";
-import JoinRoomTitle from "./JoinRoomTitle";
+import { useLocation } from "react-router-dom";
 import JoinRoomContent from "./JoinRoomContent";
+import JoinRoomTitle from "./JoinRoomTitle";
 
-import "./JoinRoomPage.css";
 import { setIsRoomHost } from "../../store/actions";
+import "./JoinRoomPage.css";
 
 const JoinRoomPage = (props) => {
   const { setIsRoomHostAction, isRoomHost } = props;
@@ -17,6 +17,7 @@ const JoinRoomPage = (props) => {
     if (isRoomHost) {
       setIsRoomHostAction(true);
     }
+    // eslint-disable-next-line
   }, []);
 
   return (
