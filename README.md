@@ -8,6 +8,12 @@ This project aims to create a video conferencing application similar to Google M
 
 WebRTC, JavaScript, SocketIO, Express.js, Node.js, React, Simple-peer
 
+## Installation
+
+Follow these steps to install and run the project:
+
+...
+
 ## Task list
 
 - [x] App creating proccess:
