@@ -54,7 +54,6 @@ const IntroductionPage = ({ setIsRoomHostAction }) => {
         </div>
       )}
       {renderButton()}
-      <h2>123678</h2>
       <div className="introduction_page_panel">
         <img src={logo} className="introduction_page_image" alt="Logo" />
         <ConnectingButtons />
