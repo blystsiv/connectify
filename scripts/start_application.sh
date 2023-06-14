@@ -1,4 +1,5 @@
 #!/bin/bash
+pwd
 echo "Starting frontend..."
 cd ../client/ && npm install && npm start && cd ../scripts
 echo "Frontend has been started"
