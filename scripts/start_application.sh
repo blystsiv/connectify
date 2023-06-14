@@ -1,9 +1,10 @@
 #!/bin/bash
-pwd
 echo "Starting frontend..."
-cd ../client/ && npm install && npm start && cd ../scripts
+cd /tmp/client && npm install
+cd /tmp/client && npm start
 echo "Frontend has been started"
 
 echo "Starting backend..."
-cd ../server/ && npm install && node server.js
+cd /tmp/server && npm install
+cd /tmp/server && node server.js
 echo "Backend has been started"
