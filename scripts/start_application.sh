@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Starting frontend..."
 cd /tmp/client && npm install
-cd /tmp/client && npm start
+cd /tmp/client && pm2 start npm --name "my-app" -- start
 echo "Frontend has been started"
 
 echo "Starting backend..."
