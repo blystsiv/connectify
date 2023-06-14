@@ -1,8 +1,8 @@
-import Peer from "simple-peer";
-import { setMessages, setShowOverlay } from "../store/actions";
+import { setShowOverlay, setMessages } from "../store/actions";
 import store from "../store/store";
-import { fetchTURNCredentials, getTurnIceServers } from "./turn";
 import * as wss from "./wss";
+import Peer from "simple-peer";
+import { fetchTURNCredentials, getTurnIceServers } from "./turn";
 
 const defaultConstraints = {
   audio: true,
@@ -196,7 +196,7 @@ const addStream = (stream, connUserSocketId) => {
 
   const participant = participants.find((p) => p.socketId === connUserSocketId);
   console.log(participant);
-  if (participant && participant.onlyAudio) {
+  if (participant?.onlyAudio) {
     videoContainer.appendChild(getAudioOnlyLabel(participant.identity));
   } else {
     videoContainer.style.position = "static";

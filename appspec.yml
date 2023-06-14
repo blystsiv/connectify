@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_application.sh
+      timeout: 100
+  ApplicationStart:
+    - location: scripts/start_application.sh
+      timeout: 100
