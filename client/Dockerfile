@@ -16,8 +16,7 @@ COPY . .
 # Build the React app
 RUN npm run build
 
-# Install http-server
-RUN npm install -g http-server
+EXPOSE 3000
 
 # Set the command to run the server
-CMD ["http-server", "build"]
+CMD ["npm", "start"]
