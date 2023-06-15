@@ -2,7 +2,7 @@ import React from 'react';
 
 const GoogleAuthIcon = () => {
   const handleGoogleAuth = () => {
-    window.location.href = 'http://18.196.214.35:5002/api/googleAuth'; // Переход на маршрут аутентификации через Google OAuth на сервере
+    window.location.href = 'http://3.67.207.237:5002/api/googleAuth'; // Переход на маршрут аутентификации через Google OAuth на сервере
   };
 
   return (
