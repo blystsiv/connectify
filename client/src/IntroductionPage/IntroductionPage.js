@@ -23,7 +23,7 @@ const IntroductionPage = ({ setIsRoomHostAction }) => {
     
     if (jwtToken) {
       localStorage.setItem("jwt", jwtToken);
-      window.location = "http://localhost:3000";
+      window.location = "https://connectify.website/";
     }
   }, []);
 
