@@ -3,7 +3,7 @@ import React from "react";
 const LogoutButton = () => {
   const handleLogout = () => {
     localStorage.removeItem("jwt"); // Удаляем JWT из Local Storage
-    window.location.href = "http://localhost:3000"; // Перенаправляем пользователя
+    window.location.href = "https://connectify.website/"; // Перенаправляем пользователя
   };
 
   return (
