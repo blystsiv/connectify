@@ -20,4 +20,4 @@ RUN npm run build
 RUN npm install -g http-server
 
 # Set the command to run the server
-CMD ["http-server", "build"]
+CMD ["http-server", "build", "-p", "80"]
