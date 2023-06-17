@@ -21,7 +21,7 @@ passport.use(
         // options for google strategy
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret,
-        callbackURL: 'https://api.connectify.website/api/googleAuth/redirect'
+        callbackURL: '/api/googleAuth/redirect'
       },
       (accessToken, refreshToken, profile, done) => {
         // check if user already exists in our own db
