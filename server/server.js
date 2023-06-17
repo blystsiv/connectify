@@ -92,7 +92,7 @@ app.get("/api/googleAuth/redirect", passport.authenticate("google"), (req, res) 
   res.cookie("jwt", token, { httpOnly: true });
 
   // Перенаправление на клиентскую часть с JWT в URL
-  res.redirect(`http://localhost:3000/?jwt=${encodeURIComponent(token)}`);
+  res.redirect(`https://connectify.website/?jwt=${encodeURIComponent(token)}`);
 });
 
 
