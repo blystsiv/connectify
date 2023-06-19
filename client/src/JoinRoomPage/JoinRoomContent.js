@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import JoinRoomInputs from "./JoinRoomInputs";
-import { connect } from "react-redux";
-import OnlyWithAudioCheckbox from "./OnlyWithAudioCheckbox";
 import jwt from 'jsonwebtoken';
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 import {
   setConnectOnlyWithAudio,
   setIdentity,
   setRoomId,
 } from "../store/actions";
+import { getRoomExists } from "../utils/api";
 import ErrorMessage from "./ErrorMessage";
 import JoinRoomButtons from "./JoinRoomButtons";
-import { useHistory } from "react-router-dom";
-import { getRoomExists } from "../utils/api";
+import JoinRoomInputs from "./JoinRoomInputs";
+import OnlyWithAudioCheckbox from "./OnlyWithAudioCheckbox";
 
 const JoinRoomContent = (props) => {
   const {
@@ -22,19 +22,19 @@ const JoinRoomContent = (props) => {
     setRoomIdAction,
   } = props;
 
-  
-const jwtToken = localStorage.getItem("jwt");
-let username = '';
-if (jwtToken) {
-  const decodedToken = jwt.decode(jwtToken);
-  if (decodedToken && decodedToken.user && decodedToken.user.username) {
-    username = decodedToken.user.username.toString();
-  }
-}
 
-const [roomIdValue, setRoomIdValue] = useState("");
-const [nameValue, setNameValue] = useState(username);
-const [errorMessage, setErrorMessage] = useState(null);
+  const jwtToken = localStorage.getItem("jwt");
+  let username = '';
+  if (jwtToken) {
+    const decodedToken = jwt.decode(jwtToken);
+    if (decodedToken && decodedToken.user && decodedToken.user.username) {
+      username = decodedToken.user.username.toString();
+    }
+  }
+
+  const [roomIdValue, setRoomIdValue] = useState("");
+  const [nameValue, setNameValue] = useState(username);
+  const [errorMessage, setErrorMessage] = useState(null);
 
 
 

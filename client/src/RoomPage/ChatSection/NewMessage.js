@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import SendMessageButton from "../../resources/images/sendMessageButton.svg";
+import { useState } from "react";
+import SendMessageButton from "../../assets/icons/send-message.svg";
 import * as webRTCHandler from "../../utils/webRTCHandler";
 
 const NewMessage = () => {
@@ -39,6 +39,7 @@ const NewMessage = () => {
         className="new_message_button"
         src={SendMessageButton}
         onClick={sendMessage}
+        alt="new msg"
       />
     </div>
   );

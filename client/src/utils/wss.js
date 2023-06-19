@@ -1,8 +1,8 @@
 import io from "socket.io-client";
-import { setRoomId, setParticipants, setSocketId } from "../store/actions";
+import { setParticipants, setRoomId, setSocketId } from "../store/actions";
 import store from "../store/store";
-import * as webRTCHandler from "./webRTCHandler";
 import { appendNewMessageToChatHistory } from "./directMessages";
+import * as webRTCHandler from "./webRTCHandler";
 
 const SERVER = "https://api.connectify.website";
 

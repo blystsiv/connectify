@@ -12,7 +12,6 @@ WebRTC, JavaScript, SocketIO, Express.js, Node.js, React, Simple-peer
 
 Follow these steps to install and run the project:
 
-...
 
 ## Task list
 

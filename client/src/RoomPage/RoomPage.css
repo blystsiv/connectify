@@ -148,7 +148,6 @@
 }
 
 .author_direct_message {
-
   padding: 1px 0;
 }
 
@@ -161,7 +160,7 @@
   display: block;
 }
 
-.direct_message_container_receiver{
+.direct_message_container_receiver {
   margin: 0 0 10px 0;
   padding: 0 10px;
   color: black;

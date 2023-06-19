@@ -1,5 +1,4 @@
-import React from "react";
-import CheckImg from "../resources/images/check.png";
+import CheckImg from "../assets/images/check.png";
 
 const OnlyWithAudioCheckbox = ({
   connectOnlyWithAudio,
@@ -13,7 +12,7 @@ const OnlyWithAudioCheckbox = ({
     <div className="checkbox_container">
       <div className="checkbox_connection" onClick={handleConnectionTypeChange}>
         {connectOnlyWithAudio && (
-          <img className="checkbox_image" src={CheckImg}></img>
+          <img className="checkbox_image" alt='check' src={CheckImg} ></img>
         )}
       </div>
       <p className="checkbox_container_paragraph">Only audio</p>

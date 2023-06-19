@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import sendMessageButton from "../../../resources/images/sendMessageButton.svg";
-import * as wss from "../../../utils/wss";
+import { useState } from "react";
 import { connect } from "react-redux";
+import sendMessageButton from "../../../assets/icons/send-message.svg";
+import * as wss from "../../../utils/wss";
 
 const NewMessage = ({ activeConversation, identity }) => {
   const [message, setMessage] = useState("");
@@ -41,6 +41,7 @@ const NewMessage = ({ activeConversation, identity }) => {
         className="new_message_button"
         src={sendMessageButton}
         onClick={sendMessage}
+        alt="send message"
       />
     </div>
   );

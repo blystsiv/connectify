@@ -1,8 +1,8 @@
-import { setShowOverlay, setMessages } from "../store/actions";
-import store from "../store/store";
-import * as wss from "./wss";
 import Peer from "simple-peer";
+import { setMessages, setShowOverlay } from "../store/actions";
+import store from "../store/store";
 import { fetchTURNCredentials, getTurnIceServers } from "./turn";
+import * as wss from "./wss";
 
 const defaultConstraints = {
   audio: true,

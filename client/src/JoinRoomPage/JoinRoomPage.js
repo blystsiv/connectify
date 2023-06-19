@@ -17,6 +17,7 @@ const JoinRoomPage = (props) => {
     if (isRoomHost) {
       setIsRoomHostAction(true);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

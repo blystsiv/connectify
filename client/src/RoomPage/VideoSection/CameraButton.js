@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import CameraButtonImg from "../../resources/images/camera.svg";
-import CameraButtonImgOff from "../../resources/images/cameraOff.svg";
+import CameraButtonImgOff from "../../assets/icons/camera-off.svg";
+import CameraButtonImg from "../../assets/icons/camera.svg";
 import * as webRTCHandler from "../../utils/webRTCHandler";
 
 const CameraButton = () => {
@@ -19,6 +19,7 @@ const CameraButton = () => {
         src={isLocalVideoDisabled ? CameraButtonImgOff : CameraButtonImg}
         className="video_button_image"
         onClick={handleCameraButtonPressed}
+        alt="Camera"
       />
     </div>
   );
