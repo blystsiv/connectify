@@ -2,12 +2,12 @@ import React from 'react';
 
 const GoogleAuthIcon = () => {
   const handleGoogleAuth = () => {
-    window.location.href = 'https://api.connectify.website/api/googleAuth'; // Переход на маршрут аутентификации через Google OAuth на сервере
+    window.location.href = 'https://api.connectify.website/api/googleAuth';
   };
 
   return (
     <div className="google_auth_icon">
-      <button onClick={handleGoogleAuth}>
+      <button className="google_button" onClick={handleGoogleAuth}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

@@ -1,6 +1,6 @@
 import React from "react";
-import ConnectingButton from "./ConnectingButton";
 import { useHistory } from "react-router-dom";
+import ConnectingButton from "./ConnectingButton";
 
 const ConnectingButtons = () => {
   let history = useHistory();
@@ -15,12 +15,12 @@ const ConnectingButtons = () => {
 
   return (
     <div className="connecting_buttons_container">
-        <ConnectingButton
-            createRoomButton
-            buttonText="Host a meeting"
-            onClickHandler={pushToJoinRoomPageAsHost}
-        />
-        <ConnectingButton
+      <ConnectingButton
+        createRoomButton
+        buttonText="Host a meeting"
+        onClickHandler={pushToJoinRoomPageAsHost}
+      />
+      <ConnectingButton
         buttonText="Join a meeting"
         onClickHandler={pushToJoinRoomPage}
       />
