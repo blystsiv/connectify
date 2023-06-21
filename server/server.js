@@ -15,7 +15,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors());
-// set up session cookies
+
 app.use(
   cookieSession({
     maxAge: 24 * 60 * 60 * 1000,
@@ -23,7 +23,6 @@ app.use(
   })
 );
 
-// initialize passport
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -85,13 +84,10 @@ app.get(
 );
 
 app.get("/api/googleAuth/redirect", passport.authenticate("google"), (req, res) => {
-  // Получение пользователя и токена из req.user
   const { user, token } = req.user;
 
-  // Установка токена в куки
   res.cookie("jwt", token, { httpOnly: true });
 
-  // Перенаправление на клиентскую часть с JWT в URL
   res.redirect(`https://connectify.website/?jwt=${encodeURIComponent(token)}`);
 });
 
@@ -162,11 +158,8 @@ const createNewRoomHandler = (data, socket) => {
 
   rooms = [...rooms, newRoom];
 
-  // emit to that client which created that room roomId
   socket.emit("room-id", { roomId });
 
-  // emit an event to all users connected
-  // to that room about new users which are right in this room
   socket.emit("room-update", { connectedUsers: newRoom.connectedUsers });
 };
 
@@ -181,17 +174,13 @@ const joinRoomHandler = (data, socket) => {
     onlyAudio,
   };
 
-  // join room as user which just is trying to join room passing room id
   const room = rooms.find((room) => room.id === roomId);
   room.connectedUsers = [...room.connectedUsers, newUser];
 
-  // join socket.io room
   socket.join(roomId);
 
-  // add new user to connected users array
   connectedUsers = [...connectedUsers, newUser];
 
-  // emit to all users which are already in this room to prepare peer connection
   room.connectedUsers.forEach((user) => {
     if (user.socketId !== socket.id) {
       const data = {
@@ -206,26 +195,20 @@ const joinRoomHandler = (data, socket) => {
 };
 
 const disconnectHandler = (socket) => {
-  // find if user has been registered - if yes remove him from room and connected users array
   const user = connectedUsers.find((user) => user.socketId === socket.id);
 
   if (user) {
-    // remove user from room in server
     const room = rooms.find((room) => room.id === user.roomId);
 
     room.connectedUsers = room.connectedUsers.filter(
       (user) => user.socketId !== socket.id
     );
 
-    // leave socket io room
     socket.leave(user.roomId);
 
-    // close the room if amount of the users which will stay in room will be 0
     if (room.connectedUsers.length > 0) {
-      // emit to all users which are still in the room that user disconnected
       io.to(room.id).emit("user-disconnected", { socketId: socket.id });
 
-      // emit an event to rest of the users which left in the toom new connectedUsers in room
       io.to(room.id).emit("room-update", {
         connectedUsers: room.connectedUsers,
       });
@@ -242,7 +225,6 @@ const signalingHandler = (data, socket) => {
   io.to(connUserSocketId).emit("conn-signal", signalingData);
 };
 
-// information from clients which are already in room that They have preapred for incoming connection
 const initializeConnectionHandler = (data, socket) => {
   const { connUserSocketId } = data;
 

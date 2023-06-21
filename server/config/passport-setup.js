@@ -6,46 +6,45 @@ const jwt = require('jsonwebtoken');
 
 
 passport.serializeUser((user, done) => {
-    done(null, user);
+  done(null, user);
 });
 
 passport.deserializeUser((id, done) => {
-    User.findById(id).then((user) => {
-        done(null, user);
-    });
+  User.findById(id).then((user) => {
+    done(null, user);
+  });
 });
 
 passport.use(
-    new GoogleStrategy(
-      {
-        // options for google strategy
-        clientID: keys.google.clientID,
-        clientSecret: keys.google.clientSecret,
-        callbackURL: 'https://api.connectify.website/api/googleAuth/redirect'
-      },
-      (accessToken, refreshToken, profile, done) => {
-        // check if user already exists in our own db
-        User.findOne({ googleId: profile.id }).then((currentUser) => {
-          if (currentUser) {
-            // already have this user
-            console.log('user is: ', currentUser);
-            const token = jwt.sign({ user: currentUser }, keys.session.secretWord);
-            done(null, { user: currentUser, token }); // передаем и user, и token
-          } else {
-            // if not, create user in our db
-            new User({
-              googleId: profile.id,
-              username: profile.displayName
-            })
-              .save()
-              .then((newUser) => {
-                console.log('created new user: ', newUser);
-                const token = jwt.sign({ userId: newUser._id }, keys.session.secretWord);
-                done(null, { user: newUser, token }); // передаем и user, и token
-              });
-          }
-        });
-      }
-    )
-  );
-  
+  new GoogleStrategy(
+    {
+      // options for google strategy
+      clientID: keys.google.clientID,
+      clientSecret: keys.google.clientSecret,
+      callbackURL: 'https://api.connectify.website/api/googleAuth/redirect'
+    },
+    (accessToken, refreshToken, profile, done) => {
+      // check if user already exists in our own db
+      User.findOne({ googleId: profile.id }).then((currentUser) => {
+        if (currentUser) {
+          // already have this user
+          console.log('user is: ', currentUser);
+          const token = jwt.sign({ user: currentUser }, keys.session.secretWord);
+          done(null, { user: currentUser, token }); // передаем и user, и token
+        } else {
+          // if not, create user in our db
+          new User({
+            googleId: profile.id,
+            username: profile.displayName
+          })
+            .save()
+            .then((newUser) => {
+              console.log('created new user: ', newUser);
+              const token = jwt.sign({ userId: newUser._id }, keys.session.secretWord);
+              done(null, { user: newUser, token });
+            });
+        }
+      });
+    }
+  )
+);

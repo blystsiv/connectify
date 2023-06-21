@@ -1,7 +1,7 @@
 module.exports = {
     google: {
         clientID: '709679411732-jhesubn0u147ij1uiup7csn94m780m23.apps.googleusercontent.com',
-        clientSecret: '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'
+        clientSecret: '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'
     },
     session: {
         secretWord: 'testtest'
