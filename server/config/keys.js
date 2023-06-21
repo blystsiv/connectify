@@ -7,6 +7,6 @@ module.exports = {
         secretWord: 'testtest'
     },
     mongodb: {
-        dbURI: 'mongodb+srv://ostapblystsiv:root@cluster0.key5tle.mongodb.net/?retryWrites=true&w=majority'
+        dbURI: 'mongodb+srv://gstratiyj:5pkx8fts@cluster0.ruatl0a.mongodb.net/?retryWrites=true&w=majority'
     }
 };
