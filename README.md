@@ -12,6 +12,23 @@ WebRTC, JavaScript, SocketIO, Express.js, Node.js, React, Simple-peer
 
 Follow these steps to install and run the project:
 
+1. Fork the project
+
+2. Clone the project
+
+3. cd client
+
+4. npm install
+
+5. npm run start
+
+6. cd ..
+
+7. cd server
+
+8. npm install
+
+9. node server.js
 
 ## Task list
 
